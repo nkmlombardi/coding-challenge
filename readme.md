@@ -1,6 +1,4 @@
 # Elsen Project
-A project assigned by Elsen to complete.
-
 #### Installation
 Navigate to the directory you wish your repository to exist in, and run the following command:
 ```
