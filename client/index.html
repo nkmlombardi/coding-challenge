@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app" ng-controller="controllers.application">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>Elsen Stock Project</title>
+    <base href="/">
+
+    <link id="lazyload_placeholder">
+
+    <!-- Framework & Application CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Chart -->
+        <div class="chart">
+            <div id="container"></div>
+        </div>
+
+        <!-- Table -->
+        <table class="table table-striped table-hover" st-table="initial" st-safe-src="overview">
+            <thead>
+                <tr>
+                    <th st-sort="item.id">Identifier</th>
+                    <th st-sort="item.oldest.date">Oldest</th>
+                    <th st-sort="item.newest.date">Newest</th>
+                    <th st-sort="item.count">Total Count</th>
+                </tr>
+                <tr>
+                    <th colspan="4">
+                        <input st-search="" class="form-control" placeholder="Search..." type="text"/>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in initial" ng-click="chartData(item.id)">
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.oldest.date }}</td>
+                    <td>{{ item.newest.date }}</td>
+                    <td>{{ item.count }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.8/smart-table.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/5.0.6/highstock.js"></script>
+
+    <!-- Application -->
+    <script src="application.js"></script>
+</body>
+</html>
