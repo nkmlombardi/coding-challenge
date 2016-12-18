@@ -2,7 +2,7 @@
 #### Installation
 Navigate to the directory you wish your repository to exist in, and run the following command:
 ```
-git clone https://github.com/nkmlombardi/elsen-project.git
+git clone https://github.com/nkmlombardi/coding-challenge.git
 ```
 Afterwards, we need to install the repository's dependencies through NPM, node's package manager:
 ```
