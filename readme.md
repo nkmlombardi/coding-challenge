@@ -1,4 +1,4 @@
-# Elsen Project
+# Coding Challenge Project
 #### Installation
 Navigate to the directory you wish your repository to exist in, and run the following command:
 ```
